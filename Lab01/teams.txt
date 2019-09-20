@@ -1,0 +1,45 @@
+Sarah Hendriksen
+CS 262
+Professor VanderLinden
+Exercise 1.2
+
+1. Demographics
+	a. What is your class level? (freshman, sophomore, junior, senior, super+-senior) - Senior
+	b. What is your major? (BCS, CS, ...) - BCS
+	c. What letter grades did you get in CS 112 and 212?
+		CS 112: A
+		CS 212: A
+
+2. Technical
+	a. Have you worked on any of the following things:
+		Java applications
+		Portable device applications (Android? iOS?)
+		GPS-based systems
+		Database-driven web sites or services
+		If so, what (briefly) have you done?
+			I've worked on Java applications, Portable device applications, and Database-driven web sites/services. For the past few years I have been interning at two different companies doing app and web development. I have worked with Angular2, Vue.js, Flutter, etc. 
+
+	b. Have you used any of the following tools:
+		Slack
+		Trello
+		Git and/or GitHub
+		If so, what have you used an how (briefly) have you used it?
+			I have used all three in the past. Slack is the way my current internship does communication. Trello I have used some for project planning. And we used GitLab (also have used GitHub in Artificial Intelligence at Calvin).
+
+	c. Do you have any Android devices and, if so, what sort of devices are they and what version of Android do they run? - no
+	   If you’d prefer to develop on another portable platform, indicate which one and whether you have a device that runs it. - yes, iOS because I have an iPhone 7 and Mac computer. 
+
+	d. What project or projects would you like to work on. Include at least one tractable project, say from the previous lab exercise or from the suggested projects in the team project specification. - I would like to work on the book exchange/selling one (see previous lab exercise for more details).
+	If you’d like, talk to other students or use the Moodle forum to form groups interested in particular project ideas.
+
+3. Personality
+	a. What is your big-five personality type? (See the reading guide for how to determine this. Please, give the five trait values only.)
+		O - 77%
+		C - 65%
+		E - 69%
+		A - 75%
+		N - 19%
+
+	b. Is there anyone you’d really like (or not like!) to work with? We’ll do our best to honor your requests here. - I would like to work with Sameer Mall (we have discussed the book selling application and both are interested in working on it together with a team).
+
+	c. Is there anything else you’d like us to know about you before assigning you to a project team? - no

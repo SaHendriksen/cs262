@@ -1,0 +1,15 @@
+Sarah Hendriksen and Sameer Mall
+CS 262
+Professor VanderLinden
+Exercise 1.1
+
+---- Practical ----
+IDEA 1: BOOK EXCHANGE
+
+This idea would entail making an application that would allow students to sell/exchange books (similar to Facebook's Free and For Sale but just for books). It would allow students to search for items by classes and connect students that are buying/selling the books. People can also indicate on there what books they are looking for so students can see which books are in demand. This would also include easily searching books by class/subject and allow you to compare prices of books that are being offered. The second part would be implementing some form of communciation between different users. 
+
+
+--- Wacky ---
+IDEA 2: SMART APARTMENT
+
+Given IoT devices being allowed on Calvin's, it would be cool to implement some smart home features for a KE apartment. This could include a simple app that also allows controlling lights/TV/other devices. This would integrate with some sort of voice command system (through an Alexa Dot?) to also do the same controls. Think a simplified version of Jarvis.
