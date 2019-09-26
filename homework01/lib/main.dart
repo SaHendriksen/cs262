@@ -33,14 +33,17 @@ class _MyHomePageState extends State<MyHomePage> {
 
   void calculateTotal() {
     setState(() {
+      int val1 = int.parse(value1Controller.text);
+      int val2 = int.parse(value2Controller.text);
+
       if (operatorValue == '+') {
-        total = int.parse(value1Controller.text) + int.parse(value2Controller.text);
+        total = val1 + val2;
       } else if (operatorValue == '-') {
-        total = int.parse(value1Controller.text) - int.parse(value2Controller.text);
+        total = val1 - val2;
       } else if (operatorValue == '*') {
-        total = int.parse(value1Controller.text) * int.parse(value2Controller.text);
+        total = val1 * val2;
       } else if (operatorValue == '/') {
-        total = int.parse(value1Controller.text) ~/ int.parse(value2Controller.text);
+        total = val1 ~/ val2;
       }
     });
   }
