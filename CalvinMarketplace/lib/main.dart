@@ -108,6 +108,7 @@ Main - provides a framework for the app that includes the app bar containing the
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:lab09/pages/filter_list.dart';
 import 'package:lab09/pages/home_page.dart';
 //import 'package:lab03/pages/edit_item.dart';
 //import 'package:lab03/pages/home_page.dart';
@@ -153,55 +154,55 @@ class HomeScreen extends StatelessWidget {
         leading: Icon(Icons.bookmark_border),
         title: Text('All Items'),
         onTap: (){
-//          Navigator.pop(context);
-//          Navigator.push(
-//            context,
-//            new MaterialPageRoute(builder: (context) => new FilterList(filter: "All Items")),
-//          );
+          Navigator.pop(context);
+          Navigator.push(
+            context,
+            new MaterialPageRoute(builder: (context) => new FilterList(filter: "All Items")),
+          );
         },
       ),
       ListTile(
         leading: Icon(FontAwesomeIcons.bookOpen),
         title: Text('Textbooks'),
         onTap: (){
-//          Navigator.pop(context);
-//          Navigator.push(
-//            context,
-//            new MaterialPageRoute(builder: (context) => new FilterList(filter: "Textbook")),
-//          );
+          Navigator.pop(context);
+          Navigator.push(
+            context,
+            new MaterialPageRoute(builder: (context) => new FilterList(filter: "Textbook")),
+          );
         },
       ),
       ListTile(
         leading: Icon(FontAwesomeIcons.tshirt),
         title: Text('Clothing'),
         onTap: (){
-//          Navigator.pop(context);
-//          Navigator.push(
-//            context,
-//            new MaterialPageRoute(builder: (context) => new FilterList(filter: "Clothing")),
-//          );
+          Navigator.pop(context);
+          Navigator.push(
+            context,
+            new MaterialPageRoute(builder: (context) => new FilterList(filter: "Clothing")),
+          );
         },
       ),
       ListTile(
         leading: Icon(FontAwesomeIcons.heart),
         title: Text('Favorited Items'),
         onTap: (){
-//          Navigator.pop(context);
-//          Navigator.push(
-//            context,
-//            new MaterialPageRoute(builder: (context) => new FilterList(filter: "Favorited")),
-//          );
+          Navigator.pop(context);
+          Navigator.push(
+            context,
+            new MaterialPageRoute(builder: (context) => new FilterList(filter: "Favorited")),
+          );
         },
       ),
       ListTile(
         leading: Icon(FontAwesomeIcons.shirtsinbulk),
         title: Text('My Items'),
         onTap: (){
-//          Navigator.pop(context);
-//          Navigator.push(
-//            context,
-//            new MaterialPageRoute(builder: (context) => new FilterList(filter: "My Items")),
-//          );
+          Navigator.pop(context);
+          Navigator.push(
+            context,
+            new MaterialPageRoute(builder: (context) => new FilterList(filter: "My Items")),
+          );
         },
       ),
       ListTile(

@@ -12,11 +12,11 @@ bool isLoggedIn = false;
 List<Item> items = [];
 
 User testUser = User(
-    id: 1,
+    id: 'DAifJg2BLKlIqHYxt2wk',
     userName: 'testUser',
     email: 'test@test.com',
     favoritedItems: ['tsyhqH27I0qGbN4HTnWA'],
-    postedItems: [1, 2, 7, 8, 9]
+    postedItems: ['tsyhqH27I0qGbN4HTnWA']
   );
 
 //List<Item> testItems = [
