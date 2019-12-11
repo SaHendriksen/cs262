@@ -10,7 +10,6 @@ import 'signup_page.dart';
 
 class LoginPage extends StatefulWidget{
   @override
-//	LoginPageState createState() => new LoginPageState();
   State<StatefulWidget> createState(){
 	return LoginPageState();
   }

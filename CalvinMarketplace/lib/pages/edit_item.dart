@@ -6,12 +6,10 @@ import 'dart:io';
 
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
-//import 'package:image_picker/image_picker.dart';
+import 'package:lab09/types/item.dart';
 
 import 'package:lab09/shared/colors.dart' as colors;
 import 'package:lab09/shared/globals.dart' as globals;
-import 'package:lab09/types/item.dart';
-import 'package:cloud_firestore/cloud_firestore.dart';
 
 class ItemForm extends StatefulWidget{
   ItemForm({Key key, this.item}) : super(key: key);
@@ -69,7 +67,7 @@ class ItemFormState extends State<ItemForm> {
 //    var image = await ImagePicker.pickImage(source: ImageSource.camera, maxHeight: 360, maxWidth: 360);
 //    setImage(image);
 //  }
-//
+
 //  void getPhotoGalleryImage() async {
 //    var image = await ImagePicker.pickImage(source: ImageSource.gallery, maxHeight: 360, maxWidth: 360);
 //    setImage(image);
@@ -119,25 +117,6 @@ class ItemFormState extends State<ItemForm> {
   }
 
   void saveItem() {
-//    Item sItem = globals.items.firstWhere((item) => item.reference.documentID == this.widget.item.reference.documentID && item.sellerId == this.widget.item.sellerId);
-//
-//    if (sItem != null) {
-//      sItem.price = itemCost.text != '' ? int.parse(itemCost.text) : 0;
-//      sItem.description = itemDescription.text;
-//      sItem.isOBO = itemOBO;
-//      sItem.name = itemName.text;
-//      sItem.condition = itemCondition;
-//      sItem.category = itemType;
-//      sItem.author = itemAuthor.text;
-//      sItem.course = itemClass.text;
-//      sItem.iSBN = itemISBN.text;
-//      sItem.size = itemSize.text;
-//      sItem.gender = itemGender;
-//      sItem.brand = itemBrand.text;
-//
-//      Navigator.pop(context);
-//    }
-
     Firestore.instance.collection('items').document(this.widget.item.reference.documentID).setData({
       'sellerId': this.widget.item.sellerId,
       'price': itemCost.text != '' ? int.parse(itemCost.text) : 0,

@@ -3,7 +3,6 @@ Sign Up Page - allows a user to create an account
  */
 
 import 'package:flutter/material.dart';
-
 import 'package:lab09/shared/colors.dart' as colors;
 
 class SignUpPage extends StatefulWidget{

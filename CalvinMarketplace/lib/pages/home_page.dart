@@ -32,17 +32,6 @@ class HomePageState extends State<HomePage> {
 
   @override
   Widget build(BuildContext context) {
-//    return Scaffold(
-////      appBar: AppBar(
-////        backgroundColor: colors.grayBlue,
-////      ),
-//      body: Container(
-//        child: Column(
-//          children: Items(),
-//        )
-//      )
-//    );
-
     List<Widget> summaryCards = [];
     globals.items.reversed.forEach((item) {
       summaryCards.add(SummaryCard(item: item, isSeller: false));
@@ -51,17 +40,17 @@ class HomePageState extends State<HomePage> {
     return CustomScrollView(
       slivers: <Widget>[
          SliverAppBar(
-//          actions: <Widget>[
-//            IconButton(
-//              icon: Icon(Icons.search),
-//                onPressed: () {
-//                  showSearch(
-//                    context: context,
+          actions: <Widget>[
+            IconButton(
+              icon: Icon(Icons.search),
+                onPressed: () {
+                  showSearch(
+                    context: context,
 //                      delegate: CustomSearchDelegate()
-//                );
-//              },
-//            ),
-//          ],
+                );
+              },
+            ),
+          ],
           backgroundColor: colors.grayBlue,
           pinned: true,
           expandedHeight: 250.0,
