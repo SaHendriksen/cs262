@@ -5,7 +5,7 @@ Edit Item Page (can also be used to add an item)
 import 'dart:io';
 
 import 'package:flutter/material.dart';
-import 'package:image_picker/image_picker.dart';
+//import 'package:image_picker/image_picker.dart';
 
 import 'package:lab09/shared/colors.dart' as colors;
 import 'package:lab09/shared/globals.dart' as globals;
@@ -63,15 +63,15 @@ class ItemFormState extends State<ItemForm> {
     }
   }
 
-  void getCameraImage() async {
-    var image = await ImagePicker.pickImage(source: ImageSource.camera, maxHeight: 360, maxWidth: 360);
-    setImage(image);
-  }
-
-  void getPhotoGalleryImage() async {
-    var image = await ImagePicker.pickImage(source: ImageSource.gallery, maxHeight: 360, maxWidth: 360);
-    setImage(image);
-  }
+//  void getCameraImage() async {
+//    var image = await ImagePicker.pickImage(source: ImageSource.camera, maxHeight: 360, maxWidth: 360);
+//    setImage(image);
+//  }
+//
+//  void getPhotoGalleryImage() async {
+//    var image = await ImagePicker.pickImage(source: ImageSource.gallery, maxHeight: 360, maxWidth: 360);
+//    setImage(image);
+//  }
 
   Future editImage() async {
     return showDialog<void>(
@@ -91,14 +91,14 @@ class ItemFormState extends State<ItemForm> {
                           child: const Text("LIBRARY"),
                           onPressed: () {
                             Navigator.pop(context);
-                            getPhotoGalleryImage();
+//                            getPhotoGalleryImage();
                           },
                         ),
                         FlatButton(
                           child: const Text("CAMERA"),
                           onPressed: () {
                             Navigator.pop(context);
-                            getCameraImage();
+//                            getCameraImage();
                           },
                         ),
                       ]
