@@ -162,9 +162,20 @@ class ItemFormState extends State<ItemForm> {
                         FlatButton(
                           child: const Text("OKAY"),
                           onPressed: () {
-                            globals.items.remove(this.widget.item);
-                            Navigator.pop(context);
-                            Navigator.pop(context);
+//                            globals.items.remove(this.widget.item);
+                            Firestore.instance.collection('sold_items').add(this.widget.item.toJson());
+                            Firestore.instance.collection('items').document(this.widget.item.reference.documentID).delete();
+
+                            globals.items = [];
+
+                            Firestore.instance.collection('items').getDocuments().then((result) {
+                              result.documents.forEach((snap) {
+                                globals.items.add(Item.fromSnapshot(snap));
+                              });
+
+                              Navigator.pop(context);
+                              Navigator.pop(context);
+                            });
                           },
                         ),
                       ]
