@@ -119,24 +119,49 @@ class ItemFormState extends State<ItemForm> {
   }
 
   void saveItem() {
-    Item sItem = globals.items.firstWhere((item) => item.reference.documentID == this.widget.item.reference.documentID && item.sellerId == this.widget.item.sellerId);
+//    Item sItem = globals.items.firstWhere((item) => item.reference.documentID == this.widget.item.reference.documentID && item.sellerId == this.widget.item.sellerId);
+//
+//    if (sItem != null) {
+//      sItem.price = itemCost.text != '' ? int.parse(itemCost.text) : 0;
+//      sItem.description = itemDescription.text;
+//      sItem.isOBO = itemOBO;
+//      sItem.name = itemName.text;
+//      sItem.condition = itemCondition;
+//      sItem.category = itemType;
+//      sItem.author = itemAuthor.text;
+//      sItem.course = itemClass.text;
+//      sItem.iSBN = itemISBN.text;
+//      sItem.size = itemSize.text;
+//      sItem.gender = itemGender;
+//      sItem.brand = itemBrand.text;
+//
+//      Navigator.pop(context);
+//    }
 
-    if (sItem != null) {
-      sItem.price = itemCost.text != '' ? int.parse(itemCost.text) : 0;
-      sItem.description = itemDescription.text;
-      sItem.isOBO = itemOBO;
-      sItem.name = itemName.text;
-      sItem.condition = itemCondition;
-      sItem.category = itemType;
-      sItem.author = itemAuthor.text;
-      sItem.course = itemClass.text;
-      sItem.iSBN = itemISBN.text;
-      sItem.size = itemSize.text;
-      sItem.gender = itemGender;
-      sItem.brand = itemBrand.text;
+    Firestore.instance.collection('items').document(this.widget.item.reference.documentID).setData({
+      'sellerId': this.widget.item.sellerId,
+      'price': itemCost.text != '' ? int.parse(itemCost.text) : 0,
+      'description': itemDescription.text,
+      'isOBO': itemOBO,
+      'name': itemName.text,
+      'condition': itemCondition,
+      'category': itemType,
+      'author': itemAuthor.text,
+      'course': itemClass.text,
+      'iSBN': itemISBN.text,
+      'size': itemSize.text,
+      'gender': itemGender,
+      'brand': itemBrand.text
+    });
+
+    globals.items = [];
+    Firestore.instance.collection('items').getDocuments().then((result) {
+      result.documents.forEach((snap) {
+        globals.items.add(Item.fromSnapshot(snap));
+      });
 
       Navigator.pop(context);
-    }
+    });
   }
 
   Future removeItem() async {
@@ -162,12 +187,10 @@ class ItemFormState extends State<ItemForm> {
                         FlatButton(
                           child: const Text("OKAY"),
                           onPressed: () {
-//                            globals.items.remove(this.widget.item);
                             Firestore.instance.collection('sold_items').add(this.widget.item.toJson());
                             Firestore.instance.collection('items').document(this.widget.item.reference.documentID).delete();
 
                             globals.items = [];
-
                             Firestore.instance.collection('items').getDocuments().then((result) {
                               result.documents.forEach((snap) {
                                 globals.items.add(Item.fromSnapshot(snap));
