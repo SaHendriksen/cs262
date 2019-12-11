@@ -5,6 +5,8 @@ Implements a summary card for an item - used in lists
 
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:lab09/pages/edit_item.dart';
+import 'package:lab09/pages/item_detail.dart';
 
 //import 'package:lab03/components/favorite_heart.dart';
 //import 'package:lab03/pages/edit_item.dart';
@@ -40,24 +42,17 @@ class SummaryCardState extends State<SummaryCard> {
 
     return GestureDetector(
             onTap: () {
-//              if (!this.widget.isSeller) {
-//                Navigator.push(
-//                    context,
-//                    NoAnimationRoute(
-//                      builder: (BuildContext context) =>
-//                          ItemDetail( item: widget.item ),
-//                    )
-//                );
-//              } else {
-//                Navigator.push(
-//                    context,
-//                    NoAnimationRoute(
-//                      builder: (BuildContext context) =>
-//                          ItemForm( item: widget.item ),
-//                    )
-//                );
-//              }
-
+              if (!this.widget.isSeller) {
+                Navigator.push(
+                  context,
+                  new MaterialPageRoute(builder: (context) => new ItemDetail(item: widget.item)),
+                );
+              } else {
+                Navigator.push(
+                    context,
+                    new MaterialPageRoute(builder: (context) => new ItemForm( item: widget.item )),
+                );
+              }
             },
             child: Container(
                 alignment: Alignment.center,

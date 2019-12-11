@@ -3,7 +3,7 @@ Home Page - shows header and list of most recent items
  */
 
 import 'package:flutter/material.dart';
-import 'package:lab09/component/summary_card.dart';
+import 'package:lab09/components/summary_card.dart';
 import 'package:lab09/shared/globals.dart' as globals;
 import 'package:lab09/shared/colors.dart' as colors;
 
