@@ -60,4 +60,23 @@ class Item {
 
   Item.fromSnapshot(DocumentSnapshot snapshot)
       : this.fromMap(snapshot.data, reference: snapshot.reference);
+
+  toJson() {
+    return {
+      'sellerId': sellerId,
+      'price': price,
+      'isOBO': isOBO,
+      'name': name,
+      'description': description,
+      'imageURL': imageURL,
+      'condition': condition,
+      'category': category,
+      'iSBN': iSBN,
+      'author': author,
+      'course': course,
+      'size': size,
+      'gender': gender,
+      'brand': brand
+    };
+  }
 }

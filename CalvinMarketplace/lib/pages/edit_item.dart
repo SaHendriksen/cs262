@@ -4,12 +4,14 @@ Edit Item Page (can also be used to add an item)
 
 import 'dart:io';
 
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 //import 'package:image_picker/image_picker.dart';
 
 import 'package:lab09/shared/colors.dart' as colors;
 import 'package:lab09/shared/globals.dart' as globals;
 import 'package:lab09/types/item.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 
 class ItemForm extends StatefulWidget{
   ItemForm({Key key, this.item}) : super(key: key);
@@ -683,24 +685,23 @@ class ItemFormState extends State<ItemForm> {
                       ),
                       GestureDetector(
                         onTap: () {
-//                          globals.items.add(
-//                              Item(
-//                                id: 11,
-//                                sellerId: 1,
-//                                price: itemCost.text != '' ? int.parse(itemCost.text) : 0,
-//                                description: itemDescription.text,
-//                                isOBO: itemOBO,
-//                                name: itemName.text,
-//                                condition: itemCondition,
-//                                category: itemType,
-//                                author: itemAuthor.text,
-//                                course: itemClass.text,
-//                                iSBN: itemISBN.text,
-//                                size: itemSize.text,
-//                                gender: itemGender,
-//                                brand: itemBrand.text,
-//                              )
-//                          );
+                          Firestore.instance.collection('items').add(
+                              Item(
+                                sellerId: globals.testUser.id,
+                                price: itemCost.text != '' ? int.parse(itemCost.text) : 0,
+                                description: itemDescription.text,
+                                isOBO: itemOBO,
+                                name: itemName.text,
+                                condition: itemCondition,
+                                category: itemType,
+                                author: itemAuthor.text,
+                                course: itemClass.text,
+                                iSBN: itemISBN.text,
+                                size: itemSize.text,
+                                gender: itemGender,
+                                brand: itemBrand.text,
+                              ).toJson()
+                          );
                           Navigator.pop(
                             context,
                           );
